@@ -26,6 +26,6 @@ For setting temperature as 29 example output is:
 
 ```
 Temperature has changed, current temperature in Celsius is: 29 C
-Temperature has changed, current temperature in Farenhait is: 84.2 F
+Temperature has changed, current temperature in Farenheit is: 84.2 F
 Temperature has changed, current temperature in Kelvin's is: 266.15 K
 ```
