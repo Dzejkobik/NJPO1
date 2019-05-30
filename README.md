@@ -1,7 +1,8 @@
 # NJPO1
 
-1,2.Decorator + Facotry example output
+1,2.Decorator + Factory example output
 
+```
 Enter text
 some text xd
 Select tag,press enter then select another tag or exit menu
@@ -18,10 +19,13 @@ Incorrect input, enter number again
 0
 Generating output ...
 <p><p><em>some text xd</em></p></p>
+```
 
 3.Events
-For setting temperature = 29 example output is:
+For setting temperature as 29 example output is:
 
+```
 Temperature has changed, current temperature in celsius is: 29 C
 Temperature has changed, current temperature is: 84.2 F
 Temperature has changed, current temperature in Kelvin's is: 266.15 K
+```
