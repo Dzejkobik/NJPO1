@@ -20,29 +20,8 @@ namespace NJPO1.Decorator
         {
             GetInputText();
             PrintMenu();
-            do
-            {
-                _failedInput = false;
-                var input = Console.ReadLine();
-                var isSuccessful = int.TryParse(input, out _enteredNumber);
-                if (!isSuccessful || _enteredNumber < 0 || _enteredNumber > 4)
-                {
-                    Console.WriteLine("Incorrect input, enter number again");
-                    _failedInput = true;
-                }
-                else if (_enteredNumber == 0)
-                {
-                    Console.WriteLine("Generating output ...");
-                }
-                else
-                {
-                    enteredNumbers.Add(_enteredNumber);
-                }
-
-            } while (_enteredNumber != 0 || _failedInput);
-
+            GetTags();
             CreateTaggedText();
-
             _abstractPlainText.Write();
         }
 
@@ -72,6 +51,30 @@ namespace NJPO1.Decorator
                 var decoratedText = decoratorFactory.CreateDecorator(typeOfEnum, _abstractPlainText);
                 _abstractPlainText = decoratedText;
             }
+        }
+
+        private void GetTags()
+        {
+            do
+            {
+                _failedInput = false;
+                var input = Console.ReadLine();
+                var isSuccessful = int.TryParse(input, out _enteredNumber);
+                if (!isSuccessful || _enteredNumber < 0 || _enteredNumber > 4)
+                {
+                    Console.WriteLine("Incorrect input, enter number again");
+                    _failedInput = true;
+                }
+                else if (_enteredNumber == 0)
+                {
+                    Console.WriteLine("Generating output ...");
+                }
+                else
+                {
+                    enteredNumbers.Add(_enteredNumber);
+                }
+
+            } while (_enteredNumber != 0 || _failedInput);
         }
     }
 }

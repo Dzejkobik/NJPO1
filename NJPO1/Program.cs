@@ -8,12 +8,12 @@ namespace NJPO1
     {
         static void Main(string[] args)
         {
-            //var decoratorRun = new DecoratorRun();
-            //decoratorRun.Run();
+            var decoratorRun = new DecoratorRun();
+            decoratorRun.Run();
 
             var temperatureSensor = new TemperatureSensor();
             var celsiusTemperatureDisplayer = new CelciusTemperatureDisplayer();
-            var farenheitTemperatureDisplayer = new FarenheitTemperatureDisplayer();
+            var farenheitTemperatureDisplayer = new FahrenheitTemperatureDisplayer();
             var kelvinTemperatureDisplayer = new KelvinTemperatureDisplayer();
 
             temperatureSensor.TemperatureChanged += celsiusTemperatureDisplayer.OnTemperatureChanged;
